@@ -11,7 +11,8 @@
 		"format": "prettier --write . && cross-env TIMING=1 eslint src --ext ts --fix",
 		"lint": "prettier --check . && cross-env TIMING=1 eslint src --ext ts",
 		"solve": "yarn build:write && node --enable-source-maps dist/solve.js",
-		"test": "yarn build:write && node --enable-source-maps dist/testSolutions.js"
+		"test": "yarn build:write && node --enable-source-maps dist/testSolutions.js",
+		"update": "yarn upgrade-interactive"
 	},
 	"dependencies": {
 		"colorette": "github:jorgebucaran/colorette"
