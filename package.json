@@ -1,0 +1,33 @@
+{
+	"name": "aoc-2022",
+	"private": true,
+	"author": "Almeida <almeidx@pm.me> (https://almeidx.dev)",
+	"type": "module",
+	"scripts": {
+		"build": "yarn build:check && yarn build:write",
+		"build:check": "tsc --noEmit",
+		"build:write": "rimraf dist && esbuild $(find src -type f -name '*.ts') --outdir=dist --platform=node --target=node18 --format=esm --sourcemap",
+		"fmt": "yarn format",
+		"format": "prettier --write . && cross-env TIMING=1 eslint src --ext ts --fix",
+		"lint": "prettier --check . && cross-env TIMING=1 eslint src --ext ts",
+		"solve": "yarn build:write && node --enable-source-maps dist/solve.js",
+		"test": "yarn build:write && node --enable-source-maps dist/testSolutions.js"
+	},
+	"dependencies": {
+		"colorette": "github:jorgebucaran/colorette"
+	},
+	"devDependencies": {
+		"@types/node": "^18.11.10",
+		"cross-env": "^7.0.3",
+		"esbuild": "^0.15.16",
+		"eslint": "^8.28.0",
+		"eslint-config-neon": "^0.1.40",
+		"prettier": "^2.8.0",
+		"rimraf": "^3.0.2",
+		"typescript": "~4.9.3"
+	},
+	"packageManager": "yarn@3.3.0",
+	"engines": {
+		"node": ">=18"
+	}
+}
