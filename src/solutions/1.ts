@@ -1,8 +1,8 @@
-export function solvePart1(input: string) {
+export function solveDay1Part1(input: string) {
 	return parseInput(input)[0];
 }
 
-export function solvePart2(input: string) {
+export function solveDay1Part2(input: string) {
 	return parseInput(input)
 		.slice(0, 3)
 		.reduce((acc, num) => acc + num, 0);

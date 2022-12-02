@@ -35,12 +35,13 @@ for (const solution of solutions) {
 console.log("\nPassed %d tests, failed %d tests", passed, failed);
 
 async function getInput(day: number) {
-	return readFile(new URL(`../tests/${day}/input.txt`, import.meta.url), "utf8");
+	const input = await readFile(new URL(`../tests/${day}/input.txt`, import.meta.url), "utf8");
+	return input.trimEnd();
 }
 
 async function getExpectedOutput(day: number, part: number) {
 	const output = await readFile(new URL(`../tests/${day}/output_${part}.txt`, import.meta.url), "utf8");
-	return output.trim();
+	return output.trimEnd();
 }
 
 function checkResult(day: number, part: number, result: unknown, expected: unknown) {
