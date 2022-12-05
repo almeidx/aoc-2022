@@ -39,7 +39,7 @@
 		"@types/node": "^18.11.10",
 		"cross-env": "^7.0.3",
 		"esbuild": "^0.15.18",
-		"eslint": "^8.28.0",
+		"eslint": "^8.29.0",
 		"eslint-config-neon": "^0.1.40",
 		"prettier": "^2.8.0",
 		"rimraf": "^3.0.2",
