@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { URL } from "node:url";
 import { solveDay1Part1, solveDay1Part2 } from "./solutions/1.js";
 import { solveDay2Part1, solveDay2Part2 } from "./solutions/2.js";
+import { solveDay3Part1, solveDay3Part2 } from "./solutions/3.js";
 
 export async function solve(day: number, part: number) {
 	const { part1, part2 } = mapDayToSolutions(day);
@@ -25,6 +26,9 @@ export function mapDayToSolutions(day: number) {
 
 		case 2:
 			return { part1: solveDay2Part1, part2: solveDay2Part2 };
+
+		case 3:
+			return { part1: solveDay3Part1, part2: solveDay3Part2 };
 
 		default:
 			throw new Error("Day not implemented");
