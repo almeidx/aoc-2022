@@ -38,7 +38,7 @@
 	"devDependencies": {
 		"@types/node": "^18.11.18",
 		"cross-env": "^7.0.3",
-		"esbuild": "^0.16.11",
+		"esbuild": "^0.16.12",
 		"eslint": "^8.30.0",
 		"eslint-config-neon": "^0.1.40",
 		"prettier": "^2.8.1",
